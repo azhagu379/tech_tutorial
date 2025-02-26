@@ -20,7 +20,8 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable) // Disable CSRF
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/**", "/swagger-ui.html", "/v3/api-docs/**").permitAll() // Allow public access
+                        .requestMatchers("/**", "/swagger-ui.html", "/v3/api-docs/**").permitAll() // Allow public
+                                                                                                   // access
                         .anyRequest().authenticated() // Secure other endpoints
                 );
 
