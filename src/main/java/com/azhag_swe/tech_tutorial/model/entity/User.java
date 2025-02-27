@@ -2,9 +2,6 @@ package com.azhag_swe.tech_tutorial.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.util.HashSet;
 import java.util.Set;
 
