@@ -10,19 +10,19 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SwaggerConfig {
 
-    @Bean
-    public OpenAPI customOpenAPI() {
-        return new OpenAPI()
-                .info(new Info()
-                        .title("Tech Tutorials API")
-                        .version("1.0")
-                        .description("API documentation for the Tech Tutorials application")
-                        .contact(new Contact()
-                                .name("Your Name")
-                                .email("your_email@example.com")
-                                .url("https://yourwebsite.com"))
-                        .license(new License()
-                                .name("Apache 2.0")
-                                .url("http://springdoc.org")));
-    }
+        @Bean
+        public OpenAPI customOpenAPI() {
+                return new OpenAPI()
+                                .info(new Info()
+                                                .title("Tech API")
+                                                .version("1.0")
+                                                .description("API documentation for the Tech application")
+                                                .contact(new Contact()
+                                                                .name("Azhagu.SWE")
+                                                                .email("azhagu.swe@gmail.com")
+                                                                .url("https://azhagu-swe.github.io/portfolio/"))
+                                                .license(new License()
+                                                                .name("Apache 2.0")
+                                                                .url("http://springdoc.org")));
+        }
 }

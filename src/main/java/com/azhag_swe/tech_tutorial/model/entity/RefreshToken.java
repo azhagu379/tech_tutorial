@@ -1,14 +1,18 @@
 package com.azhag_swe.tech_tutorial.model.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 
 @Data
 @Entity
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class RefreshToken {
 
     @Id
@@ -24,4 +28,5 @@ public class RefreshToken {
 
     @Column(nullable = false)
     private Instant expiryDate;
+    
 }
