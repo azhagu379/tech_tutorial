@@ -29,10 +29,10 @@ public class UserService {
 
     public UserResponse registerUser(RegisterRequest request) {
         User user = new User();
-        user.setUsername(request.getUsername());
-        user.setPassword(passwordEncoder.encode(request.getPassword()));
+        user.setUsername(request.username());
+        user.setPassword(passwordEncoder.encode(request.password()));
 
-        Set<String> roleNames = request.getRoles();
+        Set<String> roleNames = request.roles();
         Set<Role> roles = roleNames.stream()
                 .map(roleRepository::findByName)
                 .filter(Optional::isPresent)
